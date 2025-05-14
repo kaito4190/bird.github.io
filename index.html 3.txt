@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <title>liverpoolfc</title>
+</head>
+      <body>
+            <h1> this is block element</h1>
+            <P><font-size="11" face= "arial" color="red">this is a link of my favorite club.</p>
+            this <a href="https://www.liverpoolfc.com/news/incredible-feeling-liverpool-players-reaction-after-sealing-premier-league-title-anfield?utm_medium=push-notification&utm_source=lfc-mobile-app&utm_content=lfc-mobile-app-push-notifciation&utm_campaign=med-lfc-mobile-app-push-notifcations&utm_proposition=lfc">LINK</a>
+is an Inline element.<br> <!--<br>is a hint--> 
+</body>
+</html>
