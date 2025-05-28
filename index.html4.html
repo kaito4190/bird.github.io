@@ -9,27 +9,27 @@
         .italics {font-style:italic;} /* <i> italics*/
         
         .colorful { /* Similar to the Style we made in W3D1 */
-            background-color:rgb(14, 16, 160); 
+            background-color:rgb(168, 126, 59); 
             font-family:Arial, Helvetica, sans-serif;
             font-weight:bold;
             color:rgb(255, 0, 0);
             padding: 15px;}
 
-        .divStyle {
+        . {
             background-color:cornsilk;
             color:darkgreen;
             font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             padding: 5px;
         }
 
-        .spanStyle {
+        . {
             background-color: rgb(192, 186, 20);
             color: rgb(228, 37, 117);
             font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
             padding: 10px;
         }
 
-        .tab { /* Make a tab-space spacing for our nav bar */
+        . { /* Make a tab-space spacing for our nav bar */
             display: inline-block;
             margin-left: 40px; 
 
@@ -45,36 +45,30 @@
     <a href="" target=_blank></a>
 </div>
 
-    <h2 class="center">Heading</h2>  <!-- We called the class attribute to center-align the <h2> header -->
-    <p>Heading Tags range from h1 to h6.</p>
-    <h1>&#60; tired </h1> <!-- &#60; is the escape character for "<" so we can print the html tag without it turning into actual html -->
+    <h2 class="center">Heading Tags</h2>  <!-- We called the class attribute to center-align the <h2> header -->
+    <font color="red" 
+    <h1>&#60;  </h1>This is my favorite spoerts team I have ever seen  <!-- &#60; is the escape character for ">" so we can print the html tag without it turning into actual html -->
  
     <hr> <!-- Horizontal Bar -->
-
-    <h2 class="center">Inserting Images: Size Not Explicitly Set</h2>
-    &#60;img src = "<i>url</i>"><br><br>
-    <img src=""><br><hr>
-
-    <h2 class="center">Inserting Images: Size Explicitly Set (400 x 400)</h2>
-    &#60;img src = "<i>url</i>" width = 400 height = 400><br><br>
-    <img src="" width=400 height=400><br><hr>
-
-    <h2 class="center">Inserting Links</h2>
-    <a href = "" target = _self>Google Link (Opens in this Tab)</a><br><br> <!-- target=_self : open the link in THIS browser space (tab) - DEFAULT action when not stated -->
-    <a href = "" target = _blank>Google Link (Opens in a New Tab)</a><br><hr> <!-- target=_blank : open the link in a BLANK browser space (new tab / new window) -->
-
-    <h2 class="center">Playing with the &#60;style> Tag</h2><br>
-
-    <p>Please look at the page source code so you can see how the &#60;style> tag works within the &#60;head> tag, and using the <span class="italics">class</span> attribute.</p> 
-
-    <p class = "colorful"> Fancy Styles! </p><br><hr>
-
-    <h2 class="center">&#60;div> & &#60;span> Elements</h2>
     
-    <div class="divStyle">
-        <p>The &#60;div> element is a <b>BLOCK ELEMENT</b>. This means that it affects text as a whole to whatever is inside. &#60;div> can also hold numerous other semantic block elements, such as &#60;p>.</p>
-        <p>However, there is an equivalent <b>INLINE ELEMENT</b> that is similar to the &#60;div> tag. This is the <span class = "spanStyle">&#60;span> tag</span>.</p>
-    </div>
+   <p>Hello!!!! My name is kaito I'm from Yokohama. Today, I'm introdude my best sports team. This flag is my best sports team and the name of team is Liver pool FC </p>
+   
 
+
+    <h2 class="center">Inserting Images: </h2>
+    &#60;img src = "https://flagladyusa.com/cdn/shop/files/liverpool-fc-flags-864223_600x.png?v=1721946746"
+    <img src ="https://flagladyusa.com/cdn/shop/files/liverpool-fc-flags-864223_600x.png?v=1721946746"> width= 800 hight = auto <br><br>
+
+    &#60;img src = "https://www.footballista.jp/wp-content/uploads/2019/05/1905_VanDijk_1.jpg"<i>url</i>"> width= 800 height = auto <br><br>
+    <img src="https://www.footballista.jp/wp-content/uploads/2019/05/1905_VanDijk_1.jpg" width="800" height="auto"><br><hr>
+    <p> Virgil van Dijk </p>
+    &#60;img src =""https://assets.goal.com/images/v3/blt9519faf07194062e/20240818_salah.jpg? "<i>url</i>" width = 800 height = auto <br><br>
+    <img src="https://assets.goal.com/images/v3/blt9519faf07194062e/20240818_salah.jpg?" width="800" height="auto"><br><hr>
+    <p> Mohamed Salah </p>
+    <h2 class="center">Inserting Links</h2>
+    <a href = "https://www.liverpoolfc.com/ja" target = _self> (LIverpool site)</a><br><br> <!-- target=_self : open the link in THIS browser space (tab) - DEFAULT action when not stated -->
+    <a href = "https://www.premierleague.com" target = _blank> (premierleague site)</a><br><hr> <!-- target=_blank : open the link in a BLANK browser space (new tab / new window) -->
+    <a href = "https://www.google.com/search?q=%E3%83%97%E3%83%AC%E3%83%9F%E3%82%A2%E3%83%AA%E3%83%BC%E3%82%B0&rlz=1C1GCEA_enJP1156JP1156&oq=%E3%81%B7&gs_lcrp=EgZjaHJvbWUqEQgBEEUYBBg7GIMBGLEDGIAEMgYIABBFGDkyEQgBEEUYBBg7GIMBGLEDGIAEMg8IAhAAGAQYgwEYsQMYgAQyDwgDEAAYBBiDARixAxiABDIJCAQQABgEGIAEMgkIBRAAGAQYgAQyDwgGEAAYBBiDARixAxiABDIMCAcQABgEGLEDGIAEMhIICBAAGAQYgwEYsQMYgAQYigUyCQgJEAAYBBiABNIBCDM5MDFqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8&safe=active&ssui=on"
+     target = _self> (Result of season)</a><br><br> <!-- target=_self : open the link in THIS browser space (tab) - DEFAULT action when not stated -->
 </body>
 </html>
