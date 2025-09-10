@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Webpage</title>
+</head>
+<body>
+    <h1>This is a heading of the Webpage</h1>
+    <h2>This is where I write about my own likes</h2>
+    <h3>My favorite character in JoJo is President Funny Valentine</h3>
+    <h4>The character in JoJo has a Stand, and his Stand is D4C. It stands for "Dirty Deeds Done Dirt Cheap".</h4>
+     <a class="back-link" href="file:///C:/Users/%E6%9D%BE%E4%B8%8B%E3%80%80%E6%B5%B7%E5%8F%8B/Downloads/index.html4.html">Back to the main page</a>
+    <img src="https://jojoasbr.bn-ent.net/images/character/j5iy8hwc/chara_img_pc.png" alt="President Funny Valentine">
+    <br>
+</body>
+</html>
