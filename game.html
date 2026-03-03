@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Poker</title>
+
+<style>
+
+/* ================= GLOBAL ================= */
+
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#072d13;
+color:white;
+text-align:center;
+}
+
+.hidden{ display:none; }
+
+/* ================= START SCREEN ================= */
+
+#startScreen{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+}
+
+#startScreen h1{
+font-size:70px;
+letter-spacing:5px;
+color:gold;
+}
+
+#startScreen button{
+padding:15px 40px;
+font-size:20px;
+cursor:pointer;
+}
+
+/* ================= TABLE ================= */
+
+.table{
+position:relative;
+width:95vw;
+max-width:1000px;
+aspect-ratio:2/1;
+background:#0a4d1a;
+border:8px solid gold;
+border-radius:50%;
+margin:20px auto;
+}
+
+/* ================= COMMUNITY ================= */
+
+.community{
+position:absolute;
+top:40%;
+left:50%;
+transform:translate(-50%, -50%);
+display:flex;
+gap:10px;
+}
+
+/* ================= POT ================= */
+
+.pot-display{
+position:absolute;
+top:30%;
+left:50%;
+transform:translateX(-50%);
+font-size:20px;
+}
+
+/* ================= PLAYER ================= */
+
+.player{
+position:absolute;
+width:130px;
+font-size:13px;
+text-align:center;
+}
+
+.player.active{
+border:2px solid yellow;
+border-radius:8px;
+padding:4px;
+}
+
+/* Desktop rotation */
+.rotate-left { transform: rotate(-90deg); }
+.rotate-right { transform: rotate(90deg); }
+.rotate-top { transform: rotate(180deg); }
+
+/* ================= CARD ================= */
+
+.card{
+display:inline-flex;
+justify-content:center;
+align-items:center;
+width:50px;
+height:70px;
+background:white;
+border-radius:6px;
+margin:2px;
+font-weight:bold;
+color:black;
+transition:transform 0.6s;
+}
+
+.card.red{ color:red; }
+
+/* ================= CONTROLS ================= */
+
+#controls{
+background:#063815;
+padding:15px;
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:10px;
+}
+
+.button-row{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+button{
+padding:10px 20px;
+cursor:pointer;
+border-radius:6px;
+}
+
+button:disabled{
+opacity:0.5;
+cursor:not-allowed;
+}
+
+/* ================= CHIPS ================= */
+
+.chip-row{
+display:flex;
+gap:8px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.chip{
+width:50px;
+height:50px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:bold;
+cursor:pointer;
+color:white;
+box-shadow:0 3px 6px rgba(0,0,0,0.4);
+}
+
+.chip:active{
+transform:scale(0.9);
+}
+
+.chip-1{ background:#eee; color:black; }
+.chip-5{ background:red; }
+.chip-25{ background:green; }
+.chip-100{ background:black; }
+.chip-500{ background:purple; }
+
+/* ================= DEALER BUTTON ================= */
+
+#dealerButton{
+position:absolute;
+width:25px;
+height:25px;
+background:white;
+color:black;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:bold;
+}
+
+/* ================= MOBILE (no rotation) ================= */
+
+@media (max-width:768px){
+
+.rotate-left,
+.rotate-right,
+.rotate-top {
+    transform: rotate(0deg) !important;
+}
+
+.player{
+width:110px;
+font-size:11px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- START SCREEN -->
+<div id="startScreen">
+    <h1>POKER</h1>
+    <button id="startBtn">Start Game</button>
+</div>
+
+<!-- GAME SCREEN -->
+<div id="gameScreen" class="hidden">
+
+    <div class="top-bar">
+        <button id="backBtn">Return to Start</button>
+    </div>
+
+    <div class="table">
+
+        <div id="dealerButton">D</div>
+
+        <div id="communityCards" class="community"></div>
+
+        <div id="potDisplay" class="pot-display">Pot: $0</div>
+
+        <div id="playersContainer"></div>
+
+    </div>
+
+    <!-- CONTROLS -->
+    <div id="controls">
+
+        <div id="chipRow" class="chip-row"></div>
+
+        <input type="range" id="betSlider" min="0" max="1000" value="0">
+
+        <div class="button-row">
+            <button id="checkBtn">Check</button>
+            <button id="callBtn">Call</button>
+            <button id="raiseBtn">Raise</button>
+            <button id="foldBtn">Fold</button>
+        </div>
+
+        <div class="button-row">
+            <button class="preset" data-value="0.25">25%</button>
+            <button class="preset" data-value="0.5">50%</button>
+            <button id="allInBtn">All-in</button>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
